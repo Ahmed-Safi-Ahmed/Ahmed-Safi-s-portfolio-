@@ -3,355 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Safi - Information Security Analyst</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-dark': '#0a0a2a', // Deep blue/almost black
-                        'secondary-blue': '#4c51bf', // A professional mid-blue
-                        'accent-cyan': '#22d3ee', // Bright cyan for accents
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <title>Ahmed Safi Ahmed Shehata - Information Security Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Apply smooth scrolling behavior */
-        html {
-            scroll-behavior: smooth;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        /* Custom scrollbar for aesthetics on non-mobile */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4c51bf;
-            border-radius: 10px;
-        }
-        /* Using a global font-family */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d0d33; /* Slightly darker than primary-dark */
-            color: #f3f4f6;
+            background: linear-gradient(135deg, #0a0a2e 0%, #1e3a8a 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        /* Style for the icon SVGs */
-        .icon {
-            width: 32px;
-            height: 32px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0a0a2e 0%, #1e3a8a 100%);
+            padding: 120px 20px;
+            position: relative;
+        }
+        .hero-content {
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .hero .title {
+            font-size: 1.5rem;
+            color: #a0a0ff;
+            margin-bottom: 30px;
+        }
+        .hero img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            border: 4px solid #3b82f6;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .about, .education, .skills, .services, .projects, .contact, .thank-you {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 60px 20px;
+        }
+        h2 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #3b82f6;
+            margin: 20px auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .grid-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+        .grid-item h3 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        .grid-item p {
+            color: #a0a0ff;
+        }
+        .contact {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0a0a2e 100%);
+        }
+        .contact-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .contact img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+        }
+        .contact-info {
+            max-width: 400px;
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        .contact-info a {
+            color: #a0a0ff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            color: #3b82f6;
+        }
+        .thank-you {
+            background: linear-gradient(135deg, #0a0a2e 0%, #1e3a8a 100%);
+            padding: 100px 20px;
+        }
+        .thank-you h2 {
+            font-size: 5rem;
+            color: #ffffff;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 46, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #3b82f6;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-content { flex-direction: column; text-align: center; }
+            nav ul { flex-direction: column; align-items: center; gap: 10px; }
         }
     </style>
 </head>
-<body class="bg-primary-dark">
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- NAVIGATION BAR -->
-    <header class="sticky top-0 z-50 bg-primary-dark/95 backdrop-blur-sm shadow-lg">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-accent-cyan tracking-wider">Ahmed Safi</a>
-            
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-accent-cyan transition duration-300">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-accent-cyan transition duration-300">Skills</a>
-                <a href="#services" class="text-gray-300 hover:text-accent-cyan transition duration-300">Services</a>
-                <a href="#projects" class="text-gray-300 hover:text-accent-cyan transition duration-300">Projects</a>
-                <a href="#education" class="text-gray-300 hover:text-accent-cyan transition duration-300">Education</a>
-                <a href="#contact" class="text-gray-300 hover:text-accent-cyan transition duration-300">Contact</a>
-            </div>
-            
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-secondary-blue/50 transition duration-300">
-                <svg class="w-6 h-6 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-primary-dark shadow-xl">
-            <a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-secondary-blue/50" onclick="closeMobileMenu()">About</a>
-            <a href="#skills" class="block px-4 py-2 text-gray-300 hover:bg-secondary-blue/50" onclick="closeMobileMenu()">Skills</a>
-            <a href="#services" class="block px-4 py-2 text-gray-300 hover:bg-secondary-blue/50" onclick="closeMobileMenu()">Services</a>
-            <a href="#projects" class="block px-4 py-2 text-gray-300 hover:bg-secondary-blue/50" onclick="closeMobileMenu()">Projects</a>
-            <a href="#education" class="block px-4 py-2 text-gray-300 hover:bg-secondary-blue/50" onclick="closeMobileMenu()">Education</a>
-            <a href="#contact" class="block px-4 py-2 text-gray-300 hover:bg-secondary-blue/50" onclick="closeMobileMenu()">Contact</a>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <img src="https://github.com/Ahmed-Safi-Ahmed/Ahmed-Safi-s-portfolio-/raw/main/WhatsApp%20Image%202025-04-11%20at%2011.09.38%20PM.jpeg" alt="Ahmed Safi Ahmed Shehata">
+            <h1>ENG/Ahmed Safi</h1>
+            <p class="title">Information Security Analyst</p>
         </div>
-    </header>
+    </section>
 
-    <!-- MAIN CONTENT CONTAINER -->
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello, my name is Ahmed Safi Ahmed Shehata. My passion for security began in my first year at college, when I became fascinated by how networks connect the world — and how they can be protected. Over the past five years, I’ve grown into an Information Security Analyst with hands-on experience in tools like Wireshark, and a strong background in networking and security.</p>
+        <p>Today, I focus on helping organizations secure their infrastructures by identifying vulnerabilities, analyzing risks, and applying industry best practices.</p>
+        <p>My ultimate goal is to build trusted digital environments where businesses can thrive without fear of hidden threats.</p>
+        <p>Outside of work, I enjoy continuous learning, taking on challenges, and turning complex security problems into practical, effective solutions.</p>
+    </section>
 
-        <!-- 1. HERO / ABOUT SECTION -->
-        <section id="about" class="pt-24 pb-16 min-h-screen flex items-center">
-            <div class="grid md:grid-cols-3 gap-12 items-center">
-                
-                <!-- Photo/Image -->
-                <div class="md:col-span-1 flex justify-center">
-                    <!-- 
-                        UPDATED STYLING:
-                        - Changed rounded-full (circle) to rounded-3xl (soft-cornered square)
-                        - Increased size slightly from w-64 h-64 to w-72 h-72
-                        - object-cover is kept to ensure the area is filled cleanly.
-                    -->
-                    <img src="https://raw.githubusercontent.com/Ahmed-Safi-Ahmed/Ahmed-Safi-s-portfolio-/main/WhatsApp%20Image%202025-04-11%20at%2011.09.38%20PM.jpeg" 
-                         alt="Ahmed Safi Ahmed Shehata Professional Profile Photo" 
-                         class="rounded-3xl border-4 border-secondary-blue shadow-2xl w-72 h-72 object-cover">
-                </div>
-                
-                <!-- Introduction Content -->
-                <div class="md:col-span-2 space-y-6">
-                    <p class="text-xl text-accent-cyan font-medium">Hello, my name is</p>
-                    <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight">AHMED SAFI <span class="text-secondary-blue block mt-2">AHMED SHEHATA</span></h1>
-                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-300 border-l-4 border-accent-cyan pl-4">Information Security Analyst</h2>
-                    
-                    <p class="text-lg text-gray-400 leading-relaxed">
-                        My passion for security began in my first year at college, fascinated by how networks connect the world and how they can be protected. Over the past five years, I've grown into an Information Security Analyst with hands-on experience in tools like **Wireshark**, and a strong background in networking and security. 
-                    </p>
-                    <p class="text-lg text-gray-400 leading-relaxed">
-                        Today, I focus on helping organizations secure their infrastructures by identifying vulnerabilities, analyzing risks, and applying industry best practices. My ultimate goal is to build trusted digital environments where businesses can thrive without fear of hidden threats.
-                    </p>
-
-                    <a href="#contact" class="inline-flex items-center px-8 py-3 mt-4 text-primary-dark bg-accent-cyan rounded-lg font-semibold hover:bg-cyan-300 transition duration-300 shadow-xl shadow-accent-cyan/30">
-                        Let's Work Together
-                        <svg class="w-5 h-5 ml-2 icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Helwan University</h3>
+                <p>(2020 - 2027)</p>
+                <p>B.Sc. in Electronics & Communications Engineering</p>
             </div>
-        </section>
-
-        <div class="border-t border-secondary-blue/50 my-16"></div>
-
-        <!-- 2. SKILLS SECTION -->
-        <section id="skills" class="pt-16 pb-12">
-            <h3 class="text-4xl font-bold mb-10 text-center text-accent-cyan">Key Skills</h3>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Skill Card 1: Networking -->
-                <div class="bg-primary-dark p-6 rounded-xl border border-secondary-blue/70 shadow-2xl hover:border-accent-cyan transition duration-300">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <svg class="icon text-secondary-blue" viewBox="0 0 24 24"><path d="M12 2v6M3 10v4h18v-4M7 14v6M17 14v6M3 10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                        <h4 class="text-2xl font-semibold text-gray-100">Networking</h4>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-400 ml-2">
-                        <li>CCNA</li>
-                        <li>LAN/WAN Design & Configuration</li>
-                        <li>Routing & Switching Protocols</li>
-                    </ul>
-                </div>
-
-                <!-- Skill Card 2: Cybersecurity Fundamentals -->
-                <div class="bg-primary-dark p-6 rounded-xl border border-secondary-blue/70 shadow-2xl hover:border-accent-cyan transition duration-300">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <svg class="icon text-secondary-blue" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.74 1.74M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        <h4 class="text-2xl font-semibold text-gray-100">Cybersecurity Fundamentals</h4>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-400 ml-2">
-                        <li>Threat Analysis</li>
-                        <li>Vulnerability Assessment</li>
-                        <li>Security Architecture Review</li>
-                    </ul>
-                </div>
-                
-                <!-- Skill Card 3: Information Security -->
-                <div class="bg-primary-dark p-6 rounded-xl border border-secondary-blue/70 shadow-2xl hover:border-accent-cyan transition duration-300">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <svg class="icon text-secondary-blue" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 14V8"/></svg>
-                        <h4 class="text-2xl font-semibold text-gray-100">Information Security</h4>
-                    </div>
-                    <ul class="list-disc list-inside space-y-2 text-gray-400 ml-2">
-                        <li>Access Control Implementation</li>
-                        <li>Risk Management</li>
-                        <li>Incident Response Planning</li>
-                    </ul>
-                </div>
+            <div class="grid-item">
+                <h3>Digital Egypt Pioneers Initiative - DEPI</h3>
+                <p>(June, 2025 - December, 2026)</p>
+                <p>DEPI Information Security Analyst Program</p>
             </div>
-        </section>
-
-        <div class="border-t border-secondary-blue/50 my-16"></div>
-        
-        <!-- 3. SERVICES SECTION -->
-        <section id="services" class="pt-16 pb-12">
-            <h3 class="text-4xl font-bold mb-10 text-center text-accent-cyan">Offered Services</h3>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                
-                <!-- Service Card 1 -->
-                <div class="group bg-primary-dark p-5 rounded-xl border-t-4 border-secondary-blue hover:border-accent-cyan shadow-xl transition duration-300 text-center space-y-3">
-                    <svg class="icon mx-auto text-accent-cyan group-hover:scale-110 transition duration-300" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    <h5 class="text-xl font-semibold text-gray-100">Network Security & Monitoring</h5>
-                    <p class="text-sm text-gray-400">Implement and monitor robust network defenses.</p>
-                </div>
-                
-                <!-- Service Card 2 -->
-                <div class="group bg-primary-dark p-5 rounded-xl border-t-4 border-secondary-blue hover:border-accent-cyan shadow-xl transition duration-300 text-center space-y-3">
-                    <svg class="icon mx-auto text-accent-cyan group-hover:scale-110 transition duration-300" viewBox="0 0 24 24"><path d="M12 17V8M5 12h14M19 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2z"/></svg>
-                    <h5 class="text-xl font-semibold text-gray-100">Vulnerability Scanning & Assessment</h5>
-                    <p class="text-sm text-gray-400">Identify and prioritize security weaknesses.</p>
-                </div>
-                
-                <!-- Service Card 3 -->
-                <div class="group bg-primary-dark p-5 rounded-xl border-t-4 border-secondary-blue hover:border-accent-cyan shadow-xl transition duration-300 text-center space-y-3">
-                    <svg class="icon mx-auto text-accent-cyan group-hover:scale-110 transition duration-300" viewBox="0 0 24 24"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5zM12 15l-9-5M12 15V9M21 15l-9-5"/></svg>
-                    <h5 class="text-xl font-semibold text-gray-100">Penetration Testing (Basic/Controlled)</h5>
-                    <p class="text-sm text-gray-400">Simulate attacks to test resilience.</p>
-                </div>
-                
-                <!-- Service Card 4 -->
-                <div class="group bg-primary-dark p-5 rounded-xl border-t-4 border-secondary-blue hover:border-accent-cyan shadow-xl transition duration-300 text-center space-y-3">
-                    <svg class="icon mx-auto text-accent-cyan group-hover:scale-110 transition duration-300" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
-                    <h5 class="text-xl font-semibold text-gray-100">Threat Analysis & Risk Management</h5>
-                    <p class="text-sm text-gray-400">Evaluate threats and manage organizational risk.</p>
-                </div>
-                
-                <!-- Service Card 5 -->
-                <div class="group bg-primary-dark p-5 rounded-xl border-t-4 border-secondary-blue hover:border-accent-cyan shadow-xl transition duration-300 text-center space-y-3">
-                    <svg class="icon mx-auto text-accent-cyan group-hover:scale-110 transition duration-300" viewBox="0 0 24 24"><path d="M12 18s-4 2-8 0M17 6s1 0 1 1-1 1-1 1h-2s-1 0-1-1 1-1 1-1h2zM12 10V4M3 7s1 0 1 1-1 1-1 1h2s-1 0-1-1 1-1 1-1h2s-1 0-1-1 1-1 1-1h2s-1 0-1-1 1-1 1-1h2s-1 0-1-1 1-1 1-1h2"/></svg>
-                    <h5 class="text-xl font-semibold text-gray-100">Security Awareness Guidance</h5>
-                    <p class="text-sm text-gray-400">Training and best practice guidance for teams.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="border-t border-secondary-blue/50 my-16"></div>
-
-        <!-- 4. PROJECTS SECTION -->
-        <section id="projects" class="pt-16 pb-12">
-            <h3 class="text-4xl font-bold mb-10 text-center text-accent-cyan">Featured Projects</h3>
-
-            <div class="space-y-8">
-                
-                <!-- Project 1 -->
-                <div class="bg-primary-dark p-6 rounded-xl border border-secondary-blue/70 shadow-lg md:flex md:items-center">
-                    <div class="flex-shrink-0 mr-6 mb-4 md:mb-0">
-                        <svg class="icon text-secondary-blue w-12 h-12" viewBox="0 0 24 24"><path d="M4 14.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM15.5 10a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM15.5 15a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM12 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2zM16 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-semibold text-accent-cyan mb-2">Network Security Lab (CCNA-based)</h4>
-                        <p class="text-gray-400">Designed and configured a secure LAN/WAN infrastructure, demonstrating proficiency in Cisco networking technologies and security best practices.</p>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-primary-dark p-6 rounded-xl border border-secondary-blue/70 shadow-lg md:flex md:items-center">
-                    <div class="flex-shrink-0 mr-6 mb-4 md:mb-0">
-                        <svg class="icon text-secondary-blue w-12 h-12" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-6h2v6zm-1-8H9.5L12 7.5l2.5 2.5"/></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-semibold text-accent-cyan mb-2">Cybersecurity Lab</h4>
-                        <p class="text-gray-400">Executed hands-on vulnerability assessments of target systems using industry-standard tools like **Nmap** and **Wireshark** for packet analysis and threat detection.</p>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-primary-dark p-6 rounded-xl border border-secondary-blue/70 shadow-lg md:flex md:items-center">
-                    <div class="flex-shrink-0 mr-6 mb-4 md:mb-0">
-                        <svg class="icon text-secondary-blue w-12 h-12" viewBox="0 0 24 24"><path d="M22 10.5V12M2 12h.01M4 8v8M8 4v16M16 4v16M20 8v8"/></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-semibold text-accent-cyan mb-2">SOC Mini Project</h4>
-                        <p class="text-gray-400">Simulated a Security Operations Center (SOC) environment, focusing on real-time security monitoring and incident detection using various open-source tools and platforms.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="border-t border-secondary-blue/50 my-16"></div>
-
-        <!-- 5. EDUCATION SECTION -->
-        <section id="education" class="pt-16 pb-12">
-            <h3 class="text-4xl font-bold mb-10 text-center text-accent-cyan">Education & Certifications</h3>
-
-            <div class="max-w-4xl mx-auto space-y-8">
-                
-                <!-- Education Item 1 -->
-                <div class="bg-primary-dark p-6 rounded-xl border-l-4 border-secondary-blue shadow-lg hover:border-accent-cyan transition duration-300">
-                    <div class="flex justify-between items-start">
-                        <h4 class="text-2xl font-semibold text-gray-100">B.Sc. in Electronics & Communications Engineering</h4>
-                        <span class="text-sm font-medium text-gray-400">2020 - 2027</span>
-                    </div>
-                    <p class="text-lg text-secondary-blue mt-1">Helwan University</p>
-                </div>
-                
-                <!-- Education Item 2 -->
-                <div class="bg-primary-dark p-6 rounded-xl border-l-4 border-secondary-blue shadow-lg hover:border-accent-cyan transition duration-300">
-                    <div class="flex justify-between items-start">
-                        <h4 class="text-2xl font-semibold text-gray-100">DEPI Information Security Analyst Program</h4>
-                        <span class="text-sm font-medium text-gray-400">June, 2025 - December, 2026</span>
-                    </div>
-                    <p class="text-lg text-secondary-blue mt-1">Digital Egypt Pioneers Initiative (DEPI)</p>
-                </div>
-
-            </div>
-        </section>
-
-        <div class="border-t border-secondary-blue/50 my-16"></div>
-
-        <!-- 6. CONTACT SECTION -->
-        <section id="contact" class="pt-16 pb-24 text-center">
-            <h3 class="text-4xl font-bold mb-4 text-accent-cyan">Let's Work Together</h3>
-            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                Ready to secure your digital environment? Contact me to discuss your project needs and how I can help.
-            </p>
-
-            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-12">
-                
-                <!-- Email -->
-                <div class="flex items-center space-x-3 p-4 bg-primary-dark rounded-lg border border-secondary-blue hover:border-accent-cyan transition duration-300">
-                    <svg class="icon text-accent-cyan" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <a href="mailto:ahmeddsafii@outlook.com" class="text-lg text-gray-300 hover:text-accent-cyan">ahmeddsafii@outlook.com</a>
-                </div>
-
-                <!-- Phone -->
-                <div class="flex items-center space-x-3 p-4 bg-primary-dark rounded-lg border border-secondary-blue hover:border-accent-cyan transition duration-300">
-                    <svg class="icon text-accent-cyan" viewBox="0 0 24 24"><path d="M22 16.92v3.08a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.04 2h3.08a2 2 0 0 1 2 1.74 17.06 17.06 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 17.06 17.06 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <a href="tel:+201121165294" class="text-lg text-gray-300 hover:text-accent-cyan">+201121165294</a>
-                </div>
-            </div>
-            
-            <p class="text-sm text-gray-500 mt-6">213 Ain Hadbet-ElAhram, Giza, Egypt</p>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-primary-dark border-t border-secondary-blue/50 py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> Ahmed Safi Ahmed Shehata. Information Security Analyst Portfolio.</p>
         </div>
-    </footer>
-    
-    <!-- JAVASCRIPT FOR MOBILE MENU AND FOOTER YEAR -->
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>1. Networking</h3>
+                <p>(CCNA, LAN/WAN, Routing & Switching)</p>
+            </div>
+            <div class="grid-item">
+                <h3>2. Cybersecurity Fundamentals</h3>
+                <p>(Threat Analysis, Vulnerability Assessment)</p>
+            </div>
+            <div class="grid-item">
+                <h3>3. Information Security</h3>
+                <p>(Access Control, Risk Management, Incident Response)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Offered Services</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Network Security & Monitoring</h3>
+                <p>Secure your networks with comprehensive monitoring and protection strategies.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Vulnerability Scanning & Assessment</h3>
+                <p>Identify and evaluate potential weaknesses in your systems proactively.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Penetration Testing (Basic/Controlled)</h3>
+                <p>Simulate attacks to test and strengthen your defenses ethically.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Threat Analysis & Risk Management</h3>
+                <p>Assess threats and develop strategies to mitigate risks effectively.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Security Awareness Guidance</h3>
+                <p>Educate your team on best practices to foster a culture of security.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Network Security Lab (CCNA-based)</h3>
+                <p>Designed and configured secure LAN/WAN infrastructure.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Cybersecurity Lab</h3>
+                <p>Performed vulnerability assessment using Nmap & Wireshark.</p>
+            </div>
+            <div class="grid-item">
+                <h3>SOC Mini Project</h3>
+                <p>Simulated security monitoring and incident detection using open-source tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Let's Work Together</h2>
+        <div class="contact-content">
+            <img src="https://github.com/Ahmed-Safi-Ahmed/Ahmed-Safi-s-portfolio-/raw/main/WhatsApp%20Image%202025-04-11%20at%2011.09.38%20PM.jpeg" alt="Contact Photo">
+            <div class="contact-info">
+                <p><a href="tel:+201121165294">+201121165294</a></p>
+                <p><a href="mailto:ahmeddsafii@outlook.com">ahmeddsafii@outlook.com</a></p>
+                <p>213 Ain Hadbet-ElAhram, Giza, Egypt</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="thank-you">
+        <h2>Thank You</h2>
+    </section>
+
     <script>
-        // Set the current year in the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle Logic
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        function closeMobileMenu() {
-            mobileMenu.classList.add('hidden');
-        }
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close menu when a link is clicked (important for smooth scrolling on mobile)
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
