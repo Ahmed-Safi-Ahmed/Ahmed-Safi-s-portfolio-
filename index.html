@@ -99,12 +99,13 @@
                 <div class="md:col-span-1 flex justify-center">
                     <!-- 
                         UPDATED STYLING:
-                        - Changed object-cover to object-contain to prevent cropping.
-                        - Increased size from w-72 h-72 to w-80 h-80 for a bigger fit.
+                        - Returned to w-72 h-72 (Previous size).
+                        - Returned to object-cover to fill the frame (will still crop, but less with new position).
+                        - ADDED object-[50%_60%] to shift the image content 10% down from the center (50% horizontal, 60% vertical).
                     -->
                     <img src="https://raw.githubusercontent.com/Ahmed-Safi-Ahmed/Ahmed-Safi-s-portfolio-/main/WhatsApp%20Image%202025-04-11%20at%2011.09.38%20PM.jpeg" 
                          alt="Ahmed Safi Ahmed Shehata Professional Profile Photo" 
-                         class="rounded-3xl border-4 border-secondary-blue shadow-2xl w-80 h-80 object-contain p-2 bg-primary-dark">
+                         class="rounded-3xl border-4 border-secondary-blue shadow-2xl w-72 h-72 object-cover object-[50%_60%]">
                 </div>
                 
                 <!-- Introduction Content -->
